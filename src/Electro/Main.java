@@ -5,9 +5,14 @@ package Electro;
 public class Main {
     public static void main(String[] args) {
         Electrodomestico electro1 = new Electrodomestico("Aspiradora Atma", 300, "rojo", 10, 3);
-        electro1.verificarBajoConsumo();
+        //Bajo consumo
+
+        System.out.println( electro1.verificarBajoConsumo() ? "El electrodoméstico es bajo consumo" : "EL electrodoméstico no es bajo consumo");
         System.out.println(electro1.getPrecioBase());
         System.out.println(electro1.getPeso());
-        electro1.verificarAltaGama();
+        //Alta gama
+
+
+        System.out.println(electro1.verificarAltaGama() ? "El electrodoméstico es alta gamma" : "El electrodoméstico no es alta gamma");
     }
 }

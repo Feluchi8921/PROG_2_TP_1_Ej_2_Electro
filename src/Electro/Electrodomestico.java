@@ -70,25 +70,27 @@ public class Electrodomestico {
     }
 
     //Metodos
-    public void verificarBajoConsumo(){
+    //Bajo Consumo
+    public boolean verificarBajoConsumo(){
+        boolean bajoConsumo=false;
         if(this.consumoEnergia<45){
-            System.out.println("El electrodoméstico " +this.nombre+" es bajo consumo");
+            return bajoConsumo=true;
         }
         else{
-            System.out.println("EL electrodoméstico " +this.nombre+" no es bajo consumo");
+            return bajoConsumo;
         }
     }
     public double getBalance(){
         return this.precioBase/this.peso;
     }
 
-    public void verificarAltaGama(){
+    public boolean verificarAltaGama(){
+        boolean altaGama=false;
         if(getBalance()>3){
-            System.out.println("El electrodoméstico "+this.nombre+" es alta gamma");
+            return altaGama=true;
         }
         else{
-            System.out.println("El electrodoméstico "+this.nombre+" no es alta gamma");
-
+            return altaGama;
         }
     }
 
